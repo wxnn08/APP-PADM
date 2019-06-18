@@ -4,7 +4,7 @@
 
 ### Resumo
 
-Titulo: ?
+Titulo: UFABComidas
 
 Resumo
 
@@ -20,5 +20,5 @@ Proposta: O objetivo é criar um aplicativo android que liste todos os comércio
 | ----------------------------- | ----------- |
 | Matheus Túlio Pereira da Cruz | 11053015    |
 | Rafael Riciardi Barreira      | 11056916    |
-| Vitor Auguso de Medeiros      | 11201720112 |
+| Vitor Augusto de Medeiros     | 11201720112 |
 | Wesley Pereira da Silva       | 11006216    |
