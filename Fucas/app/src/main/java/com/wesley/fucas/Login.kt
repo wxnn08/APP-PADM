@@ -1,5 +1,4 @@
 package com.wesley.fucas
-
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +10,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.wesley.fucas.model.LoginDAO
 
-class MainActivity : AppCompatActivity() {
+class Login : AppCompatActivity() {
 
     private lateinit var usuario : TextInputEditText
     private lateinit var senha : TextInputEditText
@@ -24,6 +23,9 @@ class MainActivity : AppCompatActivity() {
 
         bindComponents()
         setEvents()
+
+        //TODO: INCLUDE FACEBOOK LOGIN
+        //https://developers.facebook.com/docs/facebook-login/android?locale=pt_BR#quickstarts-header
     }
 
     private fun setEvents() {
@@ -31,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
             // Login validation
             if(validaCadastro()) {
-                var intent = Intent(this, CatalogoLojas::class.java)
+                var intent = Intent(this, Catalogo::class.java)
                 intent.putExtra("LOGIN", true)
                 startActivity(intent)
             } else {
@@ -52,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
         // Anonymous login
         anonimo.setOnClickListener {
-            var intent = Intent(this, CatalogoLojas::class.java)
+            var intent = Intent(this, Catalogo::class.java)
             intent.putExtra("LOGIN", false)
             startActivity(intent)
         }
@@ -67,6 +69,5 @@ class MainActivity : AppCompatActivity() {
         senha = findViewById(R.id.login_edit_senha_id)
         entrar = findViewById(R.id.login_button_entrar_id)
         anonimo = findViewById(R.id.login_button_anonimo_id)
-
     }
 }

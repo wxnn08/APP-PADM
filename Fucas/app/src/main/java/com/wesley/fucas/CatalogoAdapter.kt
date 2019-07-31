@@ -4,12 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.wesley.fucas.model.LojasDAO
+import com.wesley.fucas.model.ComerciosDAO
 import kotlinx.android.synthetic.main.loja_list_item.view.*
 
-class LojaAdapter : RecyclerView.Adapter<LojaAdapter.LojaViewHolder>() {
+class CatalogoAdapter : RecyclerView.Adapter<CatalogoAdapter.LojaViewHolder>() {
+
     override fun onBindViewHolder(holder: LojaViewHolder, position: Int) {
-        val loja = LojasDAO.getLojaAt(position)
+        val loja = ComerciosDAO.getLojaAt(position)
         holder.title.text = loja.nome
         holder.descricao.text = loja.descricao
         holder.avaliacao.text = "${(loja.avaliacao/10)}.${loja.avaliacao%10}"
@@ -25,8 +26,6 @@ class LojaAdapter : RecyclerView.Adapter<LojaAdapter.LojaViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return LojasDAO.instance.size()
+        return ComerciosDAO.instance.size()
     }
-
-
 }

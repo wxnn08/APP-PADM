@@ -2,7 +2,7 @@ package com.wesley.fucas.model
 
 import android.widget.ImageView
 
-class Loja {
+class Comercio {
     var nome : String = ""
     var descricao : String = ""
     var avaliacao : Int = 0

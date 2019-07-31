@@ -2,11 +2,10 @@ package com.wesley.fucas
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class CatalogoLojas : AppCompatActivity() {
+class Catalogo : AppCompatActivity() {
 
     private var modo : Boolean = false
     private lateinit var list_lojas : RecyclerView
@@ -26,7 +25,7 @@ class CatalogoLojas : AppCompatActivity() {
     private fun bindComponents() {
         list_lojas = findViewById(R.id.catalogo_recycler_lojas)
         list_lojas.layoutManager = LinearLayoutManager(this)
-        list_lojas.adapter = LojaAdapter()
+        list_lojas.adapter = CatalogoAdapter()
     }
 }
 

@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">iFooderal</string>
+    <string name="app_name">UFABComidas</string>
     <string name="login_button_entrar">Entrar</string>
     <string name="login_txt_senha">Senha</string>
     <string name="login_txt_usuario">Usuário</string>
     <string name="login_button_anonimo">Entrar em modo anônimo</string>
     <string name="login_snack_erro">Usuário e/ou senha incorretos</string>
+    <string name="info_destaques">Destaques</string>
 </resources>
