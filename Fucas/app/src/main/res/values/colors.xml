@@ -3,4 +3,7 @@
     <color name="colorPrimary">#146820</color>
     <color name="colorPrimaryDark">#11501a</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="money">#11501a</color>
 </resources>

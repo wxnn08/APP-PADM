@@ -6,4 +6,5 @@
     <string name="login_button_anonimo">Entrar em modo anônimo</string>
     <string name="login_snack_erro">Usuário e/ou senha incorretos</string>
     <string name="info_destaques">Destaques</string>
+    <string name="avaliar">Avaliar</string>
 </resources>

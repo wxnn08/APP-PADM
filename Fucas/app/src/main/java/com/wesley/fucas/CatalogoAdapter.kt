@@ -20,6 +20,8 @@ class CatalogoAdapter : RecyclerView.Adapter<CatalogoAdapter.LojaViewHolder>() {
         val title = v.list_txt_nome
         val descricao = v.list_txt_descricao
         val avaliacao = v.list_txt_avaliacao
+        val avaliar = v.list_button_avaliar
+        val custo = v.list_txt_custo
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LojaViewHolder {
         return LojaViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.loja_list_item, parent, false))
