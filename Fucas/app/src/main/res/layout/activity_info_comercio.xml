@@ -62,6 +62,7 @@
             app:layout_constraintTop_toBottomOf="@id/info_txt_destaques"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
 
             android:layout_width="0dp"
             android:layout_height="0dp">

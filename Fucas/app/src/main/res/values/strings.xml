@@ -7,4 +7,11 @@
     <string name="login_snack_erro">Usuário e/ou senha incorretos</string>
     <string name="info_destaques">Destaques</string>
     <string name="avaliar">Avaliar</string>
+    <string name="lpshort">Lorem ipsum</string>
+    <string name="lpmedium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="lplong">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus cursus odio. Ut porta,
+        tortor quis tristique tempus, felis mi pharetra dui, id dictum dolor ipsum sit amet felis. Proin tincidunt nunc
+        in dui congue, quis egestas dolor facilisis. Integer euismod fringilla egestas. Mauris mollis magna ac ante
+        condimentum dignissim.
+    </string>
 </resources>

@@ -1,18 +1,19 @@
 package com.wesley.fucas.model
 
-import android.widget.ImageView
-
 class Comercio {
-    var nome : String = ""
-    var descricao : String = ""
-    var avaliacao : Int = 0
-    var custo : Int = 0
+    var nome : String = ""          // Nome do comércio
+    var descricao : String = ""     // Descrição do comércio
+    var avaliacao : Double = 5.0        // Avaliação: valor entre 0 e 50 (será dividido por 10 para formar uma nota entre 0,0 e 5,0)
+    var custo : Int = 0             // Com base na média dos produtos. A cada R$10,00 acrescenta-se um simbolo '$'
+    var produtos : MutableList<Produto> = ArrayList()
 
-    constructor(a : String, b : String, c : Int, d : Int) {
-        nome = a
-        descricao = b
-        avaliacao = c
-        custo = d
+    constructor(nome : String, descricao : String) {
+        this.nome = nome
+        this.descricao = descricao
+    }
+
+    fun getProdutoAt(pos : Int) : Produto{
+        return produtos[pos]
     }
 }
 

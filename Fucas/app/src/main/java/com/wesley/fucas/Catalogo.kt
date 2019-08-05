@@ -14,8 +14,10 @@ class Catalogo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_catalogo_lojas)
 
+
         bindComponents()
         defineMode()
+
     }
 
     private fun defineMode() {
@@ -27,5 +29,6 @@ class Catalogo : AppCompatActivity() {
         list_lojas.layoutManager = LinearLayoutManager(this)
         list_lojas.adapter = CatalogoAdapter()
     }
+
 }
 
