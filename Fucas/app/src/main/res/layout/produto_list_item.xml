@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="wrap_content"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
             app:layout_constraintLeft_toLeftOf="parent"
@@ -12,10 +13,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
-                                                           android:layout_height="wrap_content"
-                                                           android:layout_margin="8dp"
-        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
             <ImageView
                     android:id="@+id/produto_img_foto"
                     android:src="@drawable/sem_imagem"
@@ -59,6 +61,7 @@
                     app:layout_constraintLeft_toLeftOf="@id/produto_txt_nome"
                     app:layout_constraintTop_toBottomOf="@id/produto_txt_descricao"
             />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
