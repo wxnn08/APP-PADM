@@ -1,15 +1,13 @@
-package com.wesley.fucas
+package com.wesley.fucas.informacoes
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.MotionEvent
-import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.wesley.fucas.App
+import com.wesley.fucas.R
 import com.wesley.fucas.model.ComerciosDAO
 
 

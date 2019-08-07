@@ -1,17 +1,18 @@
-package com.wesley.fucas
+package com.wesley.fucas.informacoes
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.wesley.fucas.R
 import com.wesley.fucas.model.ComerciosDAO
-import kotlinx.android.synthetic.main.produto_list_item.view.*
+import kotlinx.android.synthetic.main.list_item_produto.view.*
 
 class ProdutoAdapter(var comercioId : Int) : RecyclerView.Adapter<ProdutoAdapter.ProdutosViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProdutosViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.produto_list_item, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item_produto, parent, false)
         return ProdutosViewHolder(itemView)
     }
 

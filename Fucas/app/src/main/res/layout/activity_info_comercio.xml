@@ -5,25 +5,25 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".InfoComercio">
+        tools:context=".informacoes.InfoComercio">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/top_info"
+            android:background="@color/colorPrimaryDark"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginRight="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
+            android:padding="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         <TextView
                 android:id="@+id/info_txt_nome"
                 android:text="Nome do comercio"
-                android:textStyle="italic"
+                android:textColor="@color/white"
+                android:textStyle="italic|bold"
                 android:textSize="24sp"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -33,7 +33,8 @@
         <TextView
                 android:id="@+id/info_txt_descricao"
                 android:text="descrição do comercio, produtos e chamada."
-                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/info_txt_nome"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -47,11 +48,12 @@
             android:text="@string/info_destaques"
             android:textSize="16dp"
             android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/top_info"
-            android:layout_marginTop="32dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
     />
     <androidx.recyclerview.widget.RecyclerView

@@ -12,12 +12,17 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".InfoComercio">
+        <activity
+                android:name=".gerenciar.GerenciarComercio"
+                android:label="@string/title_activity_gerenciar_comercio"
+                android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".Catalogo">
+        <activity android:name=".informacoes.InfoComercio">
+        </activity>
+        <activity android:name=".catalogo.Catalogo">
         </activity>
         <activity
-                android:name=".Login"
+                android:name=".login.Login"
                 android:configChanges="orientation"
                 android:screenOrientation="portrait">
             <intent-filter>

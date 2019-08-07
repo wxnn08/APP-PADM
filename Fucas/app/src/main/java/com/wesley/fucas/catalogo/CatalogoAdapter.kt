@@ -1,20 +1,21 @@
-package com.wesley.fucas
+package com.wesley.fucas.catalogo
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.wesley.fucas.App
+import com.wesley.fucas.informacoes.InfoComercio
+import com.wesley.fucas.R
 import com.wesley.fucas.model.ComerciosDAO
-import kotlinx.android.synthetic.main.loja_list_item.view.*
+import kotlinx.android.synthetic.main.list_item_loja.view.*
 
 class CatalogoAdapter : RecyclerView.Adapter<CatalogoAdapter.ComerciosViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComerciosViewHolder {
-        return ComerciosViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.loja_list_item, parent, false))
+        return ComerciosViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.list_item_loja, parent, false))
     }
 
     override fun getItemCount(): Int {

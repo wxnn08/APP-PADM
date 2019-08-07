@@ -14,4 +14,7 @@
         in dui congue, quis egestas dolor facilisis. Integer euismod fringilla egestas. Mauris mollis magna ac ante
         condimentum dignissim.
     </string>
+    <string name="title_activity_gerenciar_comercio">GerenciarComercio</string>
+    <string name="acessar_comercio">Minha loja</string>
+    <string name="gerenciar">Gerenciar loja</string>
 </resources>

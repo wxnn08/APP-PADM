@@ -1,4 +1,4 @@
-package com.wesley.fucas
+package com.wesley.fucas.login
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,8 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
+import com.wesley.fucas.R
+import com.wesley.fucas.catalogo.Catalogo
 import com.wesley.fucas.model.LoginDAO
 
 class Login : AppCompatActivity() {
@@ -34,7 +36,7 @@ class Login : AppCompatActivity() {
             // Login validation
             if(validaCadastro()) {
                 var intent = Intent(this, Catalogo::class.java)
-                intent.putExtra("LOGIN", true)
+                intent.putExtra("LOGIN", 1)
                 startActivity(intent)
             } else {
                 Snackbar.make(it, R.string.login_snack_erro, Snackbar.LENGTH_LONG).setAction("Limpar", View.OnClickListener {
@@ -55,12 +57,13 @@ class Login : AppCompatActivity() {
         // Anonymous login
         anonimo.setOnClickListener {
             var intent = Intent(this, Catalogo::class.java)
-            intent.putExtra("LOGIN", false)
+            intent.putExtra("LOGIN", 0)
             startActivity(intent)
         }
     }
 
     private fun validaCadastro(): Boolean {
+        return true
         return LoginDAO.instance.existeCadastro(usuario.text.toString(), senha.text.toString())
     }
 
