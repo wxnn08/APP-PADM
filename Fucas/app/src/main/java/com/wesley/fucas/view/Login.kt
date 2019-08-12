@@ -1,4 +1,4 @@
-package com.wesley.fucas.login
+package com.wesley.fucas.view
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,11 +9,12 @@ import android.widget.Button
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.wesley.fucas.R
-import com.wesley.fucas.catalogo.Catalogo
 import com.wesley.fucas.model.LoginDAO
+import com.wesley.fucas.viewmodel.LoginViewModel
 
 class Login : AppCompatActivity() {
 
+    private lateinit var loginViewModel: LoginViewModel
     private lateinit var usuario : TextInputEditText
     private lateinit var senha : TextInputEditText
     private lateinit var entrar : Button
@@ -28,6 +29,11 @@ class Login : AppCompatActivity() {
 
         //TODO: INCLUDE FACEBOOK LOGIN
         //https://developers.facebook.com/docs/facebook-login/android?locale=pt_BR#quickstarts-header
+    }
+
+    override fun onStart() {
+        super.onStart()
+
     }
 
     private fun setEvents() {

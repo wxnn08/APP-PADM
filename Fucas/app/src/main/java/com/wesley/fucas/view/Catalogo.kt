@@ -1,4 +1,4 @@
-package com.wesley.fucas.catalogo
+package com.wesley.fucas.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,8 +8,8 @@ import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.wesley.fucas.App
-import com.wesley.fucas.gerenciar.GerenciarComercio
 import com.wesley.fucas.R
+import kotlinx.android.synthetic.main.activity_catalogo_lojas.*
 
 class Catalogo : AppCompatActivity() {
 
@@ -19,7 +19,7 @@ class Catalogo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_catalogo_lojas)
-        setSupportActionBar(findViewById(R.id.simple_appbar))
+        setSupportActionBar(simple_appbar)
 
 
         bindComponents()
@@ -40,12 +40,10 @@ class Catalogo : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.catalogo_menu, menu)
 
-        if(ehComerciante()) {
-            menu?.add(0,0,0, "Gerenciar loja")
-        }
-
+        if(ehComerciante()) menu?.add(0,0,0, "Gerenciar loja")
         menu?.add(0,1,0,"Configurações")
         menu?.add(0, 2, 0, "Sobre")
+
         return super.onCreateOptionsMenu(menu)
     }
 

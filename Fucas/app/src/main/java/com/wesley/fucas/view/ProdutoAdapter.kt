@@ -1,4 +1,4 @@
-package com.wesley.fucas.informacoes
+package com.wesley.fucas.view
 
 import android.view.LayoutInflater
 import android.view.View

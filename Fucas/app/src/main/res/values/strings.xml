@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">UFABComidas</string>
+    <string name="app_name">Feirinha UFABC</string>
     <string name="login_button_entrar">Entrar</string>
     <string name="login_txt_senha">Senha</string>
     <string name="login_txt_usuario">Usuário</string>
     <string name="login_button_anonimo">Entrar em modo anônimo</string>
     <string name="login_snack_erro">Usuário e/ou senha incorretos</string>
-    <string name="info_destaques">Destaques</string>
+    <string name="info_destaques">Produtos</string>
     <string name="avaliar">Avaliar</string>
     <string name="lpshort">Lorem ipsum</string>
     <string name="lpmedium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
@@ -17,4 +17,12 @@
     <string name="title_activity_gerenciar_comercio">GerenciarComercio</string>
     <string name="acessar_comercio">Minha loja</string>
     <string name="gerenciar">Gerenciar loja</string>
+    <string name="adicionar_produto">Adicionar produto</string>
+    <string name="adicionar_nome">Nome</string>
+    <string name="adicionar_descricao">Descrição</string>
+    <string name="adicionar_valor">Valor</string>
+    <string name="title_activity_adicionar_produto">AdicionarProduto</string>
+    <string name="adicionar_btn_selecionarImagem">Selecionar imagem</string>
+    <string name="camera_armazenamento_rationale">Precisamos do acesso ao armazenamento</string>
+    <string name="camera_armazenamento_nao_aceito">Armazenamento não aceito</string>
 </resources>

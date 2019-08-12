@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".informacoes.InfoComercio">
+        tools:context=".view.InfoComercio">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/top_info"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content">
 
         <TextView
-                android:id="@+id/info_txt_nome"
+                android:id="@+id/gerenciar_txt_nome"
                 android:text="Nome do comercio"
                 android:textColor="@color/white"
                 android:textStyle="italic|bold"
@@ -31,12 +31,12 @@
 
         />
         <TextView
-                android:id="@+id/info_txt_descricao"
+                android:id="@+id/gerenciar_txt_descricao"
                 android:text="descrição do comercio, produtos e chamada."
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/info_txt_nome"
+                app:layout_constraintTop_toBottomOf="@id/gerenciar_txt_nome"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
         />
@@ -44,7 +44,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-            android:id="@+id/info_txt_destaques"
+            android:id="@+id/gerenciar_txt_destaques"
             android:text="@string/info_destaques"
             android:textSize="16dp"
             android:textStyle="bold"
@@ -61,7 +61,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/info_txt_destaques"
+            app:layout_constraintTop_toBottomOf="@id/gerenciar_txt_destaques"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"

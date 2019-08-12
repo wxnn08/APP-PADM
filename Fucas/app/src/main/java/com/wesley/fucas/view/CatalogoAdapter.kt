@@ -1,4 +1,4 @@
-package com.wesley.fucas.catalogo
+package com.wesley.fucas.view
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.wesley.fucas.App
-import com.wesley.fucas.informacoes.InfoComercio
 import com.wesley.fucas.R
+import com.wesley.fucas.model.Comercio
 import com.wesley.fucas.model.ComerciosDAO
 import kotlinx.android.synthetic.main.list_item_loja.view.*
 
@@ -26,13 +26,28 @@ class CatalogoAdapter : RecyclerView.Adapter<CatalogoAdapter.ComerciosViewHolder
         val comercio = ComerciosDAO.getComercioAt(position)
         holder.title.text = comercio.nome
         holder.descricao.text = comercio.descricao
-        holder.avaliacao.text = "${comercio.avaliacao}"
+        holder.avaliacao.text = comercio.getMediaAvaliacao().toString()
+        holder.custo.text = getCustoComercio(comercio)
+
+        holder.avaliar.setOnClickListener {
+
+        }
 
         holder.itemView.setOnClickListener {
             val intent = Intent(it.context, InfoComercio::class.java)
             intent.putExtra(App.COMERCIO_POSITION, position)
             ContextCompat.startActivity(it.context, intent, null)
         }
+    }
+
+    private fun getCustoComercio(comercio: Comercio): String {
+        var s = "$"
+        var qtd = comercio.getMediaPrecos()
+        while (qtd > 0) {
+            s += "$"
+            qtd--
+        }
+        return s
     }
 
 

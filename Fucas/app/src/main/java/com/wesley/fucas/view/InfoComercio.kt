@@ -1,4 +1,4 @@
-package com.wesley.fucas.informacoes
+package com.wesley.fucas.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -32,9 +32,9 @@ class InfoComercio : AppCompatActivity() {
         list_produtos.adapter = ProdutoAdapter(comercioId)
         list_produtos.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
-        txt_nome = findViewById(R.id.info_txt_nome)
+        txt_nome = findViewById(R.id.gerenciar_txt_nome)
         txt_nome.text = ComerciosDAO.getComercioAt(comercioId).nome
-        txt_descricao = findViewById(R.id.info_txt_descricao)
+        txt_descricao = findViewById(R.id.gerenciar_txt_descricao)
         txt_descricao.text = ComerciosDAO.getComercioAt(comercioId).descricao
     }
 
