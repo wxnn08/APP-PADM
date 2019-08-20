@@ -1,16 +1,19 @@
 package com.wesley.fucas.model
 
-import android.widget.ImageView
+import android.net.Uri
 
-class Produto {
-    var nome : String = "Sem nome"
-    var descricao : String = "Sem descrição"
-    var valor : Double = 0.0
-    lateinit var foto : ImageView
+class Produto(var nome: String, var descricao: String, var valor: Double) {
 
-    constructor(nome:String, descricao:String, valor:Double) {
-        this.nome = nome
-        this.descricao = descricao
-        this.valor = valor
+    var uriFoto : Uri = Uri.EMPTY
+
+    var isChecked : Boolean = true
+        private set
+
+    fun existeImagem() : Boolean {
+        return uriFoto != Uri.EMPTY
+    }
+
+    fun setCheck(state: Boolean) {
+        isChecked = state
     }
 }

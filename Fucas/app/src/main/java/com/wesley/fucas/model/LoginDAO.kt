@@ -1,10 +1,8 @@
 package com.wesley.fucas.model
 
-import android.util.Log
-
 object LoginDAO {
 
-    private val usuarios : MutableList<Usuario> = ArrayList()
+    private val cadastros : MutableList<Usuario> = ArrayList()
     val instance : LoginDAO = this
 
     init {
@@ -12,22 +10,30 @@ object LoginDAO {
     }
 
     private fun popularCadastros() {
-        usuarios.add(Usuario("wesley.p", "w123123"))
-        usuarios.add(Usuario("michel.m", "m123123"))
-        usuarios.add(Usuario("andre.s", "a123456"))
+        cadastros.add(Usuario("wesley.p", "w123123", true, 0))
+        cadastros.add(Usuario("michel.m", "m123123", true, 1))
+        cadastros.add(Usuario("andre.s", "a123456", false, 2))
     }
 
-    fun existeCadastro(usuarioDigitado : String, senhaDigitada : String) : Boolean {
-        Log.d("VERIFICA DIGITADO$ ", "usuario: $usuarioDigitado | senha: $senhaDigitada")
-        for(at in usuarios) {
-            Log.d("VERIFICA CADASTRO$ ", "usuario: ${at.usuario} | senha: ${at.senha}")
-            if(at.usuario == usuarioDigitado && at.senha == senhaDigitada)
-                return true
+    fun idCadastro(usuarioDigitado : String, senhaDigitada : String) : Int {
+        for(i in 0 until cadastros.size) {
+            val cadastro = cadastros[i]
+            if(cadastro.usuario == usuarioDigitado && cadastro.senha == senhaDigitada)
+                return i
         }
+        return -1
+    }
+
+    fun ehComerciante(id: Int) : Boolean {
+        if(id >= 0) return cadastros[id].comerciante
         return false
     }
 
+    fun getComercioId(id: Int) : Int {
+        return cadastros[id].comercioId
+    }
+
     fun size() : Int {
-        return usuarios.size
+        return cadastros.size
     }
 }

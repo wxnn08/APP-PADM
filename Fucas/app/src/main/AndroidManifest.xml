@@ -15,6 +15,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar">
         <activity
+                android:name=".view.EditarProduto"
+                android:label="@string/title_activity_editar_produto"
+                android:theme="@style/AppTheme.NoActionBar.NoActionBar">
+        </activity>
+        <activity
                 android:name=".view.AdicionarProduto"
                 android:label="@string/title_activity_adicionar_produto"
                 android:theme="@style/AppTheme.NoActionBar.NoActionBar">

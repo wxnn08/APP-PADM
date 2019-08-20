@@ -6,6 +6,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+            android:id="@+id/produto_card_item"
+            android:layout_marginBottom="2dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -14,9 +16,9 @@
             android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_margin="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp">
+                android:layout_height="wrap_content">
 
             <ImageView
                     android:id="@+id/produto_img_foto"
@@ -24,6 +26,7 @@
                     android:foreground="@drawable/rounded_fg"
                     android:layout_width="100sp"
                     android:layout_height="100sp"
+                    android:scaleType="centerCrop"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
             />

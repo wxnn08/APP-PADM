@@ -6,8 +6,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:showIn="@layout/activity_adicionar_produto"
-        tools:context=".view.AdicionarProduto">
+        tools:showIn="@layout/activity_editar_produto"
+        tools:context=".view.EditarProduto">
 
     <LinearLayout
             android:orientation="vertical"
@@ -20,7 +20,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
 
-       <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/adicionar_nome"
@@ -29,7 +29,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/adicionar_edt_nome"
+                    android:id="@+id/editar_edt_nome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text|textMultiLine"
@@ -46,7 +46,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/adicionar_edt_descricao"
+                    android:id="@+id/editar_edt_descricao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text|textMultiLine"
@@ -61,7 +61,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/adicionar_edt_valor"
+                    android:id="@+id/editar_edt_valor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="numberDecimal"
@@ -69,7 +69,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-                android:id="@+id/adicionar_btn_capturar"
+                android:id="@+id/editar_btn_capturar"
                 android:text="@string/adicionar_btn_selecionarImagem"
                 android:layout_marginTop="8dp"
                 android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
         />
 
         <ImageView
-                android:id="@+id/adicionar_img_imagem"
+                android:id="@+id/editar_img_imagem"
                 android:layout_marginTop="8dp"
                 android:scaleType="centerCrop"
                 android:foreground="@drawable/rounded_fg"
@@ -85,7 +85,5 @@
                 android:layout_height="200dp"
                 android:adjustViewBounds="true"
         />
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

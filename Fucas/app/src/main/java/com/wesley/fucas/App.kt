@@ -5,7 +5,11 @@ import android.content.Context
 
 class App : Application() {
     companion object {
-        val COMERCIO_POSITION: String = "COMERCIO_POSITION"
+        const val LOGIN_ID_ANONIMO: Int = -1
+        const val LOGIN_EXTRA_ACTIVITY = "loginExtraActivity"
+        const val COMERCIO_POSITION: String = "comercioPosition"
+        const val PRODUTO_POSITION: String = "produtoPosition"
+
         lateinit var context: Context
             private set
     }

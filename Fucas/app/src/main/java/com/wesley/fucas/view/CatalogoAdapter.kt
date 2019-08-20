@@ -10,20 +10,22 @@ import com.wesley.fucas.App
 import com.wesley.fucas.R
 import com.wesley.fucas.model.Comercio
 import com.wesley.fucas.model.ComerciosDAO
+import com.wesley.fucas.viewmodel.CatalogoViewModel
 import kotlinx.android.synthetic.main.list_item_loja.view.*
 
-class CatalogoAdapter : RecyclerView.Adapter<CatalogoAdapter.ComerciosViewHolder>() {
+class CatalogoAdapter (val catalogoViewModel: CatalogoViewModel): RecyclerView.Adapter<CatalogoAdapter.ComerciosViewHolder>() {
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComerciosViewHolder {
         return ComerciosViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.list_item_loja, parent, false))
     }
 
     override fun getItemCount(): Int {
-        return ComerciosDAO.instance.size()
+        return catalogoViewModel.sizeComercios()
     }
 
     override fun onBindViewHolder(holder: ComerciosViewHolder, position: Int) {
-        val comercio = ComerciosDAO.getComercioAt(position)
+        val comercio = catalogoViewModel.getComercioAt(position)
         holder.title.text = comercio.nome
         holder.descricao.text = comercio.descricao
         holder.avaliacao.text = comercio.getMediaAvaliacao().toString()
@@ -50,12 +52,11 @@ class CatalogoAdapter : RecyclerView.Adapter<CatalogoAdapter.ComerciosViewHolder
         return s
     }
 
-
-    inner class ComerciosViewHolder(v : View) : RecyclerView.ViewHolder(v) {
-        val title = v.list_txt_nome
-        val descricao = v.list_txt_descricao
-        val avaliacao = v.list_txt_avaliacao
-        val avaliar = v.list_button_avaliar
-        val custo = v.list_txt_custo
+    inner class ComerciosViewHolder(view : View) : RecyclerView.ViewHolder(view) {
+        val title = view.list_txt_nome
+        val descricao = view.list_txt_descricao
+        val avaliacao = view.list_txt_avaliacao
+        val avaliar = view.list_button_avaliar
+        val custo = view.list_txt_custo
     }
 }

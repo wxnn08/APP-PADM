@@ -4,7 +4,7 @@
     <string name="login_txt_senha">Senha</string>
     <string name="login_txt_usuario">Usuário</string>
     <string name="login_button_anonimo">Entrar em modo anônimo</string>
-    <string name="login_snack_erro">Usuário e/ou senha incorretos</string>
+    <string name="usuario_senha_incorretos">Usuário e/ou senha incorretos</string>
     <string name="info_destaques">Produtos</string>
     <string name="avaliar">Avaliar</string>
     <string name="lpshort">Lorem ipsum</string>
@@ -25,4 +25,15 @@
     <string name="adicionar_btn_selecionarImagem">Selecionar imagem</string>
     <string name="camera_armazenamento_rationale">Precisamos do acesso ao armazenamento</string>
     <string name="camera_armazenamento_nao_aceito">Armazenamento não aceito</string>
+    <string name="menu_gerenciar_loja">Gerenciar comércio</string>
+    <string name="menu_configuracoes">Configurações</string>
+    <string name="menu_sobre">Sobre</string>
+    <string name="catalogo_erro_id_comercio">Erro ao sincronizar login com comércio</string>
+    <string name="gerenciar_remover">Remover</string>
+    <string name="gerenciar_editar">Editar</string>
+    <string name="gerenciar_adicionar">Adicionar novo</string>
+    <string name="adicionar_erro_selecionar_imagem">Não foi possivel selecionar a imagem</string>
+    <string name="gerenciar_produto_removido">Produto removido com sucesso</string>
+    <string name="gerenciar_produto_cancelado">Remoção cancelada</string>
+    <string name="title_activity_editar_produto">EditarProduto</string>
 </resources>
