@@ -35,6 +35,11 @@ class Catalogo : AppCompatActivity() {
 
     private fun defineMode() {
         idLogin = intent.getIntExtra(App.LOGIN_EXTRA_ACTIVITY, App.LOGIN_ID_ANONIMO)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (list_lojas.adapter as CatalogoAdapter).notifyDataSetChanged()
 
     }
 

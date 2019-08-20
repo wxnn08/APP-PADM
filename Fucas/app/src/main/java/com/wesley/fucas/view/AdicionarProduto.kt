@@ -104,11 +104,6 @@ class AdicionarProduto : AppCompatActivity() {
         txtValor = findViewById(R.id.adicionar_edt_valor)
         imgImagem = findViewById(R.id.adicionar_img_imagem)
         btnCapturar = findViewById(R.id.adicionar_btn_capturar)
-        btnCapturar.isEnabled = false
-    }
-
-
-    fun enableUI() {
         btnCapturar.isEnabled = true
     }
 
@@ -119,7 +114,7 @@ class AdicionarProduto : AppCompatActivity() {
             if(grantResults.size > 1 &&
                     grantResults[0] == PackageManager.PERMISSION_GRANTED &&
                     grantResults[1] == PackageManager.PERMISSION_GRANTED)
-                enableUI()
+                // Pode-se fazer algo aqui
             else {
                 permissionLogic.showPermissionDeniedResponseDialog(R.string.camera_armazenamento_nao_aceito)
             }
